@@ -27,16 +27,17 @@ public class GameStoreServiceLayer {
     TaxRepository taxRepo;
     ProcessingFeeRepository processingFeeRepo;
 
-    @Autowired
-    private CatalogClient catalogClient;
+     CatalogClient catalogClient;
 
 
 
     @Autowired
-    public GameStoreServiceLayer(InvoiceRepository invoiceRepo, TaxRepository taxRepo, ProcessingFeeRepository processingFeeRepo) {
+    public GameStoreServiceLayer(InvoiceRepository invoiceRepo, TaxRepository taxRepo, ProcessingFeeRepository processingFeeRepo,
+                                 CatalogClient catalogClient) {
         this.invoiceRepo = invoiceRepo;
         this.taxRepo = taxRepo;
         this.processingFeeRepo = processingFeeRepo;
+        this.catalogClient =catalogClient;
     }
 
 
@@ -47,7 +48,7 @@ public class GameStoreServiceLayer {
             throw new NullPointerException("Create invoice failed. no invoice data.");
 
         if(invoiceViewModel.getItemType()==null)
-            throw new IllegalArgumentException("Unrecognized Item type. Valid ones: Console or Game");
+            throw new IllegalArgumentException("Unrecognized Item type. Valid ones: T-shirt, Console or Game");
 
         //Check Quantity is > 0...
         if(invoiceViewModel.getQuantity()<=0){

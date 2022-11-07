@@ -1,6 +1,6 @@
 package com.company.gamestoreinvoicing.repository;
 
-import com.trilogyed.gamestore.model.ProcessingFee;
+import com.company.gamestoreinvoicing.model.ProcessingFee;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.math.BigDecimal;
 import java.util.Optional;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(SpringJUnit4ClassRunner.class)

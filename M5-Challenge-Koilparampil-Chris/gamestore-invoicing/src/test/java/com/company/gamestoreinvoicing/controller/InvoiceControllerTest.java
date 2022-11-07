@@ -1,8 +1,8 @@
 package com.company.gamestoreinvoicing.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.trilogyed.gamestore.service.GameStoreServiceLayer;
-import com.trilogyed.gamestore.viewModel.InvoiceViewModel;
+import com.company.gamestoreinvoicing.service.GameStoreServiceLayer;
+import com.company.gamestoreinvoicing.viewModel.InvoiceViewModel;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
